@@ -1,0 +1,11 @@
+{% load i18n %}
+{% load account %}
+{% autoescape off %}
+{% blocktrans %} Hello from Ayurtantra.
+
+You're receiving this e-mail since you are trying to register on Ayurtantra.
+
+Please confirm this request by going to {{ activate_url }}
+
+{% endblocktrans %}
+{% endautoescape %}

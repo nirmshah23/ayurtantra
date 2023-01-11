@@ -1,0 +1,15 @@
+{% extends '_base.html' %}
+{% load static %}
+{% block title %}Welcome{% endblock title %}
+{% block content %}
+<h1>Ayurtantra Mobile</h1>
+<img src="{% static 'images/nirmal.jpg' %}">
+{% if user.is_authenticated %}
+Hi, you are logged in as {{ user.email }}!
+<p><a href="{% url 'account_logout' %}">Log Out</a></p>
+{% else %}
+<p>Your email is verified. Login to your mobile app.</p>
+<a href="{% url 'account_login' %}">Log In</a>
+<a href="{% url 'account_signup' %}">Sign Up</a>
+{% endif %}
+{% endblock content %}
